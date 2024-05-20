@@ -7,17 +7,16 @@ export const createProperty = async (propertyData) => {
 
   try {
     return axios
-      .post(`${URL}/property/create-property`, propertyData,{
+      .post(`${URL}/property/create-property`, propertyData, {
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "Bearer " + accessToken,
+          Authorization: "Bearer " + accessToken,
         },
       })
       .then((response) => {
-        console.log(response)
-        if (response.status === 201 ||response.status === 200 ) {
-         
-            return response.data;
+        console.log(response);
+        if (response.status === 201 || response.status === 200) {
+          return response.data;
         } else {
           throw new Error("Post property failed");
         }
@@ -28,16 +27,16 @@ export const createProperty = async (propertyData) => {
 };
 
 export const deleteProperty = async (propertyId) => {
-
   const deletePropertyEndpoint = `${URL}/property/delete-property?id=${propertyId}`;
   const accessToken = localStorage.getItem("accessToken");
   return axios
-    .delete(deletePropertyEndpoint,{headers: {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer " + accessToken,
-    }})
+    .delete(deletePropertyEndpoint, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + accessToken,
+      },
+    })
     .then((response) => {
-      
       return response.status;
     })
     .catch((error) => {
@@ -47,56 +46,55 @@ export const deleteProperty = async (propertyId) => {
 };
 
 export const putProperty = async (propertyId, updatedPropertyData) => {
-
   const updatePropertyEndpoint = `${URL}/property/update-property?id=${propertyId}`;
 
-
   return axios
-    .post(updatePropertyEndpoint, updatedPropertyData,{
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer " + accessToken,
-        },
-      })
+    .post(updatePropertyEndpoint, updatedPropertyData, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + accessToken,
+      },
+    })
     .then((response) => {
-      response = response.data
-      
-      return response.data; 
+      response = response.data;
+
+      return response.data;
     })
     .catch((error) => {
-      
       console.error("Property update failed:", error.message);
       throw new Error("Property update failed: " + error.message);
     });
 };
 
 export const getPropertyDetailsById = async (propertyId) => {
-
-  if (!propertyId || typeof propertyId !== 'string') {
-    throw new Error('getPropertyDetailsById: Invalid propertyId. It must be a string.');
+  if (!propertyId || typeof propertyId !== "string") {
+    throw new Error(
+      "getPropertyDetailsById: Invalid propertyId. It must be a string."
+    );
   }
 
-  
   const baseUrl = `${URL}/property`;
   const params = new URLSearchParams({ id: propertyId });
   const endpoint = `${baseUrl}/get-property-id?${params.toString()}`;
 
   // 3. Retrieve Access Token Securely
-  const accessToken = localStorage.getItem("accessToken"); 
+  const accessToken = localStorage.getItem("accessToken");
 
   try {
     const response = await fetch(endpoint, {
-      method: 'GET', 
+      method: "GET",
       headers: {
-        "Authorization": `Bearer ${accessToken}`, 
-        "Content-Type": "application/json", 
-        "redirect":"follow",
-        "ngrok-skip-browser-warning": "69420"
+        Authorization: `Bearer ${accessToken}`,
+        "Content-Type": "application/json",
+        redirect: "follow",
+        "ngrok-skip-browser-warning": "69420",
       },
     });
 
     if (!response.ok) {
-      throw new Error(`Error fetching property details: ${response.statusText}`);
+      throw new Error(
+        `Error fetching property details: ${response.statusText}`
+      );
     }
 
     const data = await response.json();
@@ -108,38 +106,57 @@ export const getPropertyDetailsById = async (propertyId) => {
   }
 };
 
+// export const getAllPropertyDetails = async () => {
 
+//   const baseUrl = `${URL}/property`;
+//   const endpoint = `${baseUrl}/get-all-property`;
+
+//   const accessToken = localStorage.getItem("accessToken"); // Replace with your access token retrieval logic
+
+//   try {
+//     const response = await fetch(endpoint, {
+//       method: 'GET', // Explicitly specify GET method
+//       headers: {
+//         "Authorization": `Bearer ${accessToken}`, // Use template literal for security
+//         "Content-Type": "application/json", // Assuming JSON data is expected (optional)
+//         "redirect":"follow",
+//         "ngrok-skip-browser-warning": "69420"
+//       },
+//     });
+
+//     if (!response.ok) {
+//       throw new Error(`Error fetching property details: ${response.statusText}`);
+//     }
+
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error("Error fetching property details:", error.message);
+//     throw new Error("Failed to fetch property details");
+//   }
+// };
 export const getAllPropertyDetails = async () => {
-
   const baseUrl = `${URL}/property`;
   const endpoint = `${baseUrl}/get-all-property`;
 
   const accessToken = localStorage.getItem("accessToken"); // Replace with your access token retrieval logic
 
   try {
-    const response = await fetch(endpoint, {
-      method: 'GET', // Explicitly specify GET method
+    const response = await axios.get(endpoint, {
       headers: {
-        "Authorization": `Bearer ${accessToken}`, // Use template literal for security
+        Authorization: `Bearer ${accessToken}`, // Use template literal for security
         "Content-Type": "application/json", // Assuming JSON data is expected (optional)
-        "redirect":"follow",
-        "ngrok-skip-browser-warning": "69420"
+        "ngrok-skip-browser-warning": "69420",
       },
     });
 
-    if (!response.ok) {
-      throw new Error(`Error fetching property details: ${response.statusText}`);
-    }
-
-    const data = await response.json();
-    return data;
+    return response.data;
   } catch (error) {
     console.error("Error fetching property details:", error.message);
     throw new Error("Failed to fetch property details");
   }
 };
 export const getAllPropertyDetailsbyUser = async () => {
-
   const baseUrl = `${URL}/property`;
   const endpoint = `${baseUrl}/get-property-by-user`;
 
@@ -147,17 +164,19 @@ export const getAllPropertyDetailsbyUser = async () => {
 
   try {
     const response = await fetch(endpoint, {
-      method: 'GET', // Explicitly specify GET method
+      method: "GET", // Explicitly specify GET method
       headers: {
-        "Authorization": `Bearer ${accessToken}`, // Use template literal for security
+        Authorization: `Bearer ${accessToken}`, // Use template literal for security
         "Content-Type": "application/json", // Assuming JSON data is expected (optional)
-        "redirect":"follow",
-        "ngrok-skip-browser-warning": "69420"
+        redirect: "follow",
+        "ngrok-skip-browser-warning": "69420",
       },
     });
 
     if (!response.ok) {
-      throw new Error(`Error fetching property details: ${response.statusText}`);
+      throw new Error(
+        `Error fetching property details: ${response.statusText}`
+      );
     }
 
     const data = await response.json();
