@@ -1,0 +1,40 @@
+.buyer-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .buyer-dashboard h2 {
+    margin-bottom: 20px;
+  }
+  
+  .buyer-dashboard ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .buyer-dashboard li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .buyer-dashboard button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .buyer-dashboard button:hover {
+    background-color: #0056b3;
+  }
+  

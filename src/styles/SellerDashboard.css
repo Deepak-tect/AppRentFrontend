@@ -1,0 +1,51 @@
+.seller-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .seller-dashboard h2 {
+    margin-bottom: 20px;
+  }
+  
+  .seller-dashboard a {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .seller-dashboard a:hover {
+    text-decoration: underline;
+  }
+  
+  .seller-dashboard ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .seller-dashboard li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .seller-dashboard button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+  
+  .seller-dashboard button:hover {
+    background-color: #0056b3;
+  }
+  

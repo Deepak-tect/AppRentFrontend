@@ -1,0 +1,49 @@
+.edit-property-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edit-property-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .edit-property-container form {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .edit-property-container form label {
+    font-weight: bold;
+  }
+  
+  .edit-property-container form input[type="text"],
+  .edit-property-container form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .edit-property-container form textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px; /* Set a minimum height */
+  }
+  
+  .edit-property-container form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-property-container form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
