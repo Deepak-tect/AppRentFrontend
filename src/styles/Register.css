@@ -1,4 +1,87 @@
 .register-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.register-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #007bff;
+}
+
+.register-container form div {
+  margin-bottom: 15px;
+}
+
+.register-container form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.register-container form input[type="text"],
+.register-container form input[type="email"],
+.register-container form input[type="tel"],
+.register-container form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-container form input[type="text"]:focus,
+.register-container form input[type="email"]:focus,
+.register-container form input[type="tel"]:focus,
+.register-container form input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.register-container form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.register-container form button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.register-container form a {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.register-container form a:hover {
+  color: #0056b3;
+}
+
+
+
+/* .register-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -40,4 +123,4 @@
   
   .register-container form button:hover {
     background-color: #0056b3;
-  }
+  } */

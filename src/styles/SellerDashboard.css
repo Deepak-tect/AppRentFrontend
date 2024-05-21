@@ -1,4 +1,99 @@
 .seller-dashboard {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.seller-dashboard h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #007bff;
+}
+
+.seller-dashboard a.button {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #fff;
+  background-color: #007bff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+  text-align: center;
+}
+
+.seller-dashboard a.button:hover {
+  background-color: #0056b3;
+}
+
+.seller-dashboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.seller-dashboard li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.seller-dashboard li:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seller-dashboard span {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+}
+
+.seller-dashboard .button {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.seller-dashboard .button:hover {
+  transform: scale(1.05);
+}
+
+.seller-dashboard .edit-button {
+  background-color: #007bff;
+}
+
+.seller-dashboard .delete-button {
+  background-color: #dc3545;
+}
+.seller-dashboard .edit-button {
+  margin-right: 10px; /* Add margin to the right of the Edit button */
+  background-color: #007bff;
+}
+
+.seller-dashboard .delete-button {
+  background-color: #dc3545;
+}
+
+
+/* .seller-dashboard {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -48,4 +143,4 @@
   .seller-dashboard button:hover {
     background-color: #0056b3;
   }
-  
+   */

@@ -1,4 +1,68 @@
+
+
+
 .buyer-dashboard {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.buyer-dashboard h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: center;
+  color: #007bff;
+}
+
+.buyer-dashboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.buyer-dashboard li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.buyer-dashboard li:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buyer-dashboard span {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+}
+
+.buyer-dashboard a {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.buyer-dashboard a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* .buyer-dashboard {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -37,4 +101,4 @@
   .buyer-dashboard button:hover {
     background-color: #0056b3;
   }
-  
+   */

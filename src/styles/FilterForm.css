@@ -1,4 +1,60 @@
-.filter-form-container {
+.filter-form {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+.filter-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-form input, .filter-form button {
+  width: calc(100% - 40px);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px;
+}
+
+.filter-form input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.filter-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.filter-form button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/* .filter-form-container {
     margin-bottom: 20px;
   }
   
@@ -31,4 +87,4 @@
   .filter-form-container form button:hover {
     background-color: #0056b3;
   }
-  
+   */
