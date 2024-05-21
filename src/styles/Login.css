@@ -43,12 +43,13 @@
     } */
 
     body {
-      background-color: #e7e6e6; 
+      /* background-color: #e7e6e6;  */
       background-image: url('https://img.freepik.com/free-photo/plant-against-blue-wall-background-with-copy-space_53876-98324.jpg');
       background-size: cover; /* Ensure the image covers the entire background */
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Prevent the image from repeating */
       background-color: #e7e6e6;
+      background-attachment: fixed;
     }
     .login-container {
       max-width: 400px;
